@@ -1,20 +1,16 @@
 body{
     background-color: #4A90E2;
 }
-
 h1,h2{
     text-align: center;
 }
-
 form{
     background-color: white;
     margin: auto;
     width: 80%;
     height: auto;
     padding: 10px;
-    /* text-align: center; */
 }
-
 .time{
     background-color:#4A90E2 ;
     width:fit-content ;
@@ -33,11 +29,6 @@ border-radius: 5px;
     font-size: 20px;
     /* text-align: right; */
 }
-
-.input:hover{
-
-}
-
 .addbtn{
     background-color: rgb(20, 165, 20);
     border-radius: 5px;
@@ -50,7 +41,6 @@ margin: 10px;
     color: white;
     cursor: pointer;
 }
-
 .tasks{
     background-color: #4A90E2;
 margin: auto;
@@ -60,12 +50,7 @@ padding: 10px;
 overflow: auto;
 border:5px solid #4A90E2;
 }
-
-
-
 .lidiv,.inputAddbtn{
-    /* background-color: rgb(192, 52, 52); */
-    /* height: 100px; */
     display: flex;
     flex-wrap: nowrap;
 }
@@ -91,28 +76,6 @@ float:right;
 img:hover{
 border:2px solid #4A90E2}
 
-
-
-span {
-    visibility: hidden;
-    /* width: 120px;
-    background-color: black;
-    color: #fff;
-    text-align: center;
-    border-radius: 6px;
-    padding: 5px 0;
-  
-    /* Position the tooltip */
-    position: absolute;
-    z-index: 1; */
-  }
-
-  img:hover span {
-    visibility: visible;
-background-color: white;
-width: 300px;
-height: 300px;
-  }
 .clearallbtn{
 background-color: rgb(202, 8, 8);
 border-radius: 5px;
