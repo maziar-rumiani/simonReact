@@ -136,4 +136,7 @@ display:block;
   .clearAll{
       margin: 10px auto !important;
   }
+.form{
+height:unset;
+    }
 }
