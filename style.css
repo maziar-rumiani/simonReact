@@ -1,92 +1,139 @@
 body{
     background-color: #4A90E2;
+    margin: 0;
+    overflow-y:hidden;
+
 }
 h1,h2{
     text-align: center;
 }
 form{
     background-color: white;
-    margin: auto;
+    margin: 0 auto;
     width: 80%;
-    height: auto;
-    padding: 10px;
+    height: 100vh;
+    padding: 30px;
 }
 .time{
-    background-color:#4A90E2 ;
+    color: #4A90E2 ;
     width:fit-content ;
     height: 40px;
     font-size: 30px;
     border-radius: 5px;
     padding: 5px;
+    box-shadow: 2px 2px 2px 1px rgb(80, 80, 153);
 }
+
+.add{
+    /* background-color: red; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
 .input{
-border:none;
-border: 5px solid #4A90E2;
-border-radius: 5px;
-    width: 80%;
-    height: 40px;
-    margin: 10px;
+    border:none;
+    border-radius: 5px;
+    width: 60%;
     font-size: 20px;
     /* text-align: right; */
+    transition: 1s;
+    box-shadow: 2px 2px 2px 2px blue;
+    padding: 10px;
 }
+.input:hover{
+    transform: scale(1.05);
+}
+
 .addbtn{
-    background-color: rgb(20, 165, 20);
     border-radius: 5px;
-width: 100px;
-height: 50px;
-margin: 10px;
+    width: 80px;
+    height: 40px;
+    transition: 0.1s;
+    border: none;
+    background-color: white;
+    box-shadow: 2px 2px 2px 1px green;
 }
 .addbtn:hover{
     background-color: rgb(0, 255, 0);
-    color: white;
     cursor: pointer;
+    transform: scale(1.1);
 }
+
 .tasks{
     background-color: #4A90E2;
-margin: auto;
-width: 90%;
-height: 200px;
-padding: 10px;
-overflow: auto;
-border:5px solid #4A90E2;
+    height: 250px;
+    padding: 10px;
+    overflow: auto;
+    border:5px solid #4A90E2;
 }
-.lidiv,.inputAddbtn{
+.lidiv{
+    margin: 0 auto;
+    /* width: 9%; */
     display: flex;
     flex-wrap: nowrap;
+    justify-content: space-between;
 }
 .newTask{
     background-color:white;
     border-radius: 5px;
     width: 90%;
     height: 30px;
- /* border:1px solid black; */
-margin: 10px;
-padding: 10px;
-overflow: auto ;
+    /* border:1px solid black; */
+    margin: 10px;
+    padding: 10px;
+    overflow: auto ;
 }
-img{
-border-radius: 14px;
-float:right;
- cursor: pointer;
- height:50px ;
- width: 50px;
- margin-top: 10px;
+.deleteItem , .lidiv i{
+    color: rgb(240, 70, 70);
+    border-radius: 14px;
+    float:right;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 50px;
+    width: 50px;
+    transition: 1s;
  
 }
-img:hover{
-border:2px solid #4A90E2}
+.deleteItem:hover{
+    color: red;
+    transform: scale(1.1);
+}
 
-.clearallbtn{
-background-color: rgb(202, 8, 8);
+
+
+
+.clearAll{
 border-radius: 5px;
 width: 150px;
 height: 30px;
-margin: 10px;
-
+margin: 50px 0;
+border: none;
+background-color: white;
+box-shadow: 2px 2px 2px 2px rgb(202, 8, 8);
+transition: 0.1s;
+display:block;
 }
-.clearallbtn:hover{
-    background-color: rgb(255, 0, 0);
-    color: white;
+.clearAll:hover{
+    background-color: rgb(253, 40, 40);
     cursor: pointer;
+    transform: scale(1.1);
+    box-shadow: 2px 2px 2px 2px black;
+}
 
+@media(max-width:750px){
+    .time{
+        margin: 0 auto;
+    }
+    .input{
+        margin: 10px auto;
+        width: 90%;
+    }
+  .addbtn{
+    margin: 10px auto;
+    width: 100px;
+  }     
+  .clearAll{
+      margin: 10px auto !important;
+  }
 }

@@ -1,49 +1,27 @@
+// time
 let time= new(Date);
-switch(new Date().getDay()){
-    case 0:
-      day = 'Sun';
-      break;
-    case 1:
-      day = 'Mon';
-      break;
-    case 2:
-      day = 'Tue';
-      break;
-    case 3:
-      day = 'Wed';
-      break;
-    case 4:
-      day = 'Thu';
-      break;
-    case 5:
-      day = 'Fri';
-      break;
-    case 6:
-      day = 'Sat';
-      break;
-  }
-
-
-document.querySelector(".time").innerHTML="  "+time.getHours()+":"+time.getMinutes()+" - "+day;
+let day = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat']
+document.querySelector(".time").innerHTML = time.getHours() + ":" + time.getMinutes() + " - " + day[new Date().getDay()];
+// todo
 document.querySelector(".addbtn").addEventListener("click",addtask);
 function addtask(e) {
     // add tasks to the list
     const input=document.querySelector(".input").value
-    const lidiv  = document.createElement('div');
+    const lidiv  = document.createElement('li');
     const li  = document.createElement('h3');
-    const lilink  = document.createElement('img');
+    const lilink  = document.createElement('i');
     const tooltiptext  = document.createElement('span');
-    lilink.src="remove.png";
     li.className = 'newTask';
     lidiv.className='lidiv';
-lilink.className="imagelink";
+lilink.className="deleteItem fas fa-window-close";
 tooltiptext.className="tooltiptext";
-tooltiptext.innerHTML='<div class="tooltiptext">Tooltip text</div>';
+tooltiptext.innerHTML='<div class="tooltiptext"></div>';
 lilink.appendChild(tooltiptext);
     li.appendChild(document.createTextNode(input));
     lidiv.appendChild(li);
     lidiv.appendChild(lilink);
     document.querySelector('.tasks').appendChild(lidiv);
+    
     // save tasks in localStorage
     let tasks;
     if(localStorage.getItem('tasks') === null) {
@@ -62,6 +40,9 @@ location.reload(); //I should change it later
 
     e.preventDefault();
 }
+
+
+
 // see the saved tasks when open the browser again
 tasks = JSON.parse(localStorage.getItem('tasks'));
 if(localStorage.getItem('tasks') === null) {
@@ -70,11 +51,10 @@ else{
 tasks.forEach(function(task){
     const lidiv  = document.createElement('div');
     const li  = document.createElement('h3');
-    const lilink  = document.createElement('img');
-    lilink.src="remove.png";
+    const lilink  = document.createElement('i');
     li.className = 'newTask';
     lidiv.className='lidiv';
-    lilink.className="imagelink";
+    lilink.className="deleteItem fas fa-window-close";
     li.appendChild(document.createTextNode(task));
     lidiv.appendChild(li);
     lidiv.appendChild(lilink);
@@ -82,7 +62,7 @@ tasks.forEach(function(task){
   });
 }
 //   clear all the task from localStorage
-document.querySelector(".clearallbtn").addEventListener("click",clearAlltasks);
+document.querySelector(".clearAll").addEventListener("click",clearAlltasks);
 function clearAlltasks(e) {
     if(confirm("Are you sure?")){
     location.reload(); //I should change it later
@@ -102,10 +82,11 @@ tasks.forEach(function(){
 }
 //   clear each task by pressing the x button from the page
  document.body.addEventListener("click",clearTask);
-//  document.querySelector(".imagelink").addEventListener("click",clearTask);
+//  document.querySelector(".deleteItem").addEventListener("click",clearTask);
 
  function clearTask(e) {
-    if(e.target.className==='imagelink'){
+   console.log(e.target.tagName)
+    if(e.target.tagName==='I'){
         if(confirm("Are you sure?")){
          e.target.parentElement.remove();
          removeataskfromLS(e.target.parentElement);
