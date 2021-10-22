@@ -1,26 +1,22 @@
 body{
     background-color: #4A90E2;
     margin: 0;
-    overflow-y:hidden;
-
-}
-h1,h2{
-    text-align: center;
 }
 form{
     background-color: white;
     margin: 0 auto;
     width: 80%;
-    height: 100vh;
     padding: 30px;
 }
 .time{
+    margin-bottom: 30px;
     color: #4A90E2 ;
-    width:fit-content ;
+    width:170px;
     height: 40px;
     font-size: 30px;
     border-radius: 5px;
     padding: 5px;
+    text-align: center;
     box-shadow: 2px 2px 2px 1px rgb(80, 80, 153);
 }
 
@@ -38,11 +34,14 @@ form{
     font-size: 20px;
     /* text-align: right; */
     transition: 1s;
-    box-shadow: 2px 2px 2px 2px blue;
     padding: 10px;
+    box-shadow: 2px 2px 2px 2px blue;
+    background-color: #ced6df;
 }
 .input:hover{
-    transform: scale(1.05);
+    background-color: white;
+    /* transform: scale(1.05);
+     */
 }
 
 .addbtn{
@@ -67,9 +66,8 @@ form{
     overflow: auto;
     border:5px solid #4A90E2;
 }
-.lidiv{
+.li{
     margin: 0 auto;
-    /* width: 9%; */
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-between;
@@ -79,12 +77,13 @@ form{
     border-radius: 5px;
     width: 90%;
     height: 30px;
-    /* border:1px solid black; */
+    font-size: 20px;
     margin: 10px;
     padding: 10px;
     overflow: auto ;
+    
 }
-.deleteItem , .lidiv i{
+.deleteItem , .li i{
     color: rgb(240, 70, 70);
     border-radius: 14px;
     float:right;
@@ -106,7 +105,7 @@ form{
 .clearAll{
 border-radius: 5px;
 width: 150px;
-height: 30px;
+height: 40px;
 margin: 50px 0;
 border: none;
 background-color: white;
@@ -121,9 +120,16 @@ display:block;
     box-shadow: 2px 2px 2px 2px black;
 }
 
-@media(max-width:750px){
+@media(max-width:700px){
+    body{
+        background-color: white;
+    }
     .time{
-        margin: 0 auto;
+        margin: 5px auto;
+        font-size: 100%;
+        height: 20px;
+        width: 90px;
+        padding:5px 10px;
     }
     .input{
         margin: 10px auto;
@@ -133,7 +139,22 @@ display:block;
     margin: 10px auto;
     width: 100px;
   }     
+  .tasks{
+      /* background-color: red; */
+      width: 95%;
+      margin: 0 auto;
+      padding: 0;
+  }
+  .li{
+  }
+
   .clearAll{
       margin: 10px auto !important;
+  }
+  form{
+      padding: unset;
+      padding-top: 5px;
+      width: 100%;
+      margin: 0;
   }
 }
