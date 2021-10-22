@@ -106,7 +106,7 @@ form{
 border-radius: 5px;
 width: 150px;
 height: 40px;
-margin: 50px 0;
+/* margin: 50px 0; */
 border: none;
 background-color: white;
 box-shadow: 2px 2px 2px 2px rgb(202, 8, 8);
@@ -149,7 +149,7 @@ display:block;
   }
 
   .clearAll{
-      margin: 10px auto !important;
+      margin: 0 auto !important;
   }
   form{
       padding: unset;
