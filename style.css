@@ -11,7 +11,7 @@ form{
 .time{
     margin-bottom: 30px;
     color: #4A90E2 ;
-    width:170px;
+    width:180px;
     height: 40px;
     font-size: 30px;
     border-radius: 5px;
@@ -128,7 +128,7 @@ display:block;
         margin: 5px auto;
         font-size: 100%;
         height: 20px;
-        width: 90px;
+        width: 100px;
         padding:5px 10px;
     }
     .input{
