@@ -149,7 +149,7 @@ display:block;
   }
 
   .clearAll{
-      margin: 0 auto !important;
+      margin: 10px auto !important;
   }
   form{
       padding: unset;
