@@ -9,10 +9,12 @@ body{
     position: relative;
 }
 form{
+    box-shadow: 2px 2px 2px 2px rgb(117, 114, 114);
     background-color: white;
     margin: 0 auto;
     width: 600px;
     padding: 10px 10px 1px 10px;
+    border-radius: 0 0 10px 10px ;
 }
 .time{
     margin-bottom: 30px;
@@ -188,7 +190,7 @@ display:none;
     .time{
         font-size: 18px;
         height: 30px;
-        width: 120px;
+        width: 130px;
         padding:5px ;
     }
     form{
