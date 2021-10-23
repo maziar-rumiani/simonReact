@@ -11,20 +11,31 @@
 </head>
 <body>
     <div class="container">
+        <div class="alert">
+            <span class="alert_box">
+                <p>Are you sure?</p>
+                <button class="yesBtn">Yes</button>
+                <button class="cancelBtn">Cancel</button>
+            </span>
+        </div>
 <form >
     <div class="time"></div>
     <div class="add">
-        <input class="input" type="text" dir=auto placeholder="Enter a task here ... " />
-        <button class="addbtn" title="Add the task">Add Task</button>
+        <input class="input" type="text" dir=auto placeholder="Enter a new task here ... " />
+        <button class="addbtn">
+            <i class=" fas fa-plus-square" title="Add the task"></i>
+        </button>
     </div>
     <ol class="tasks"></ol>
-    <button class="clearAll" title="Clear all the Tasks">Clear all</button>
+    <button class="clearAll" type="text" title="Clear all the Tasks">Clear all</button>
 </form>
     </div>
-<script src="app.js"></script>    
+<script src="add.js"></script>    
 <script src="time.js"></script>    
-<script src="clear.js"></script>    
+<script type="module" src="clear.js"></script>    
 <script src="clearAll.js"></script>    
 <script src="loadTasks.js"></script>    
+<script type="module" src="alert.js"></script>    
+<script type="module" src="showOptions.js"></script>    
 </body>
 </html>

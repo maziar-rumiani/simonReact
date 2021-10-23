@@ -2,20 +2,29 @@ body{
     background-color: #4A90E2;
     margin: 0;
 }
+*{
+    box-sizing: border-box;
+}
+.container{
+    position: relative;
+}
 form{
     background-color: white;
     margin: 0 auto;
-    width: 80%;
-    padding: 30px;
+    width: 600px;
+    padding: 10px 10px 1px 10px;
 }
 .time{
     margin-bottom: 30px;
     color: #4A90E2 ;
-    width:190px;
+    width:fit-content;
     height: 40px;
-    font-size: 30px;
+    width: 170px;
+    font-size: 25px;
     border-radius: 5px;
-    padding: 5px;
+    padding: 10px;
+    margin: 0 auto;
+    margin-bottom: 10px;
     text-align: center;
     box-shadow: 2px 2px 2px 1px rgb(80, 80, 153);
 }
@@ -25,136 +34,164 @@ form{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    position: relative;
 }
 
 .input{
     border:none;
     border-radius: 5px;
-    width: 60%;
-    font-size: 20px;
+    width: 100%;
+    font-size: 18px;
     /* text-align: right; */
     transition: 1s;
-    padding: 10px;
-    box-shadow: 2px 2px 2px 2px blue;
-    background-color: #ced6df;
-}
-.input:hover{
+    padding-left: 10px;
+    padding-right: 50px;
+    box-shadow: 2px 2px 2px 2px #4A90E2;
     background-color: white;
-    /* transform: scale(1.05);
-     */
-}
-
-.addbtn{
-    border-radius: 5px;
-    width: 80px;
     height: 40px;
-    transition: 0.1s;
-    border: none;
+}
+.input:focus{
+    outline: none;
+    box-shadow: 2px 2px 2px 2px green;
+    font-size: 20px;    
+}
+.addbtn{
+    color: green;
+    font-size: 40px;
+    transition: 0.2s;
+    position: absolute;
+    text-align: center;
+    display: flex;
+    right: 3px;
+    visibility: hidden;
     background-color: white;
-    box-shadow: 2px 2px 2px 1px green;
+    border: none;
+    padding: 0;
 }
 .addbtn:hover{
-    background-color: rgb(0, 255, 0);
+    color: rgb(0, 255, 0);
     cursor: pointer;
-    transform: scale(1.1);
 }
-
 .tasks{
     background-color: #4A90E2;
-    height: 250px;
+    height: 300px;
     padding: 10px;
     overflow: auto;
-    border:5px solid #4A90E2;
+    border-radius: 5px;
 }
-.li{
+li{
     margin: 0 auto;
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-between;
+    position: relative;
+    /* background-color: red; */
 }
 .newTask{
     background-color:white;
     border-radius: 5px;
-    width: 90%;
-    height: 30px;
-    font-size: 20px;
-    margin: 10px;
-    padding: 10px;
-    overflow: auto ;
-    
+    width: 100%;
+    height: 40px;
+    font-size: 22px;
+    margin: 10px 0;
+    padding: 5px;
+    overflow-x: auto ;
+    overflow-y: hidden ;
+    cursor: pointer;
 }
-.deleteItem , .li i{
-    color: rgb(240, 70, 70);
-    border-radius: 14px;
-    float:right;
+li i{
+    color: rgb(243, 117, 117);
     cursor: pointer;
     margin-top: 10px;
-    font-size: 50px;
-    width: 50px;
-    transition: 1s;
- 
+    font-size: 40px;
+    position: absolute;
+    right: 0;
+    visibility: hidden;
+    background-color: white;
+    width: 43px;
+    height: 40px;
+    border-radius: 0 5px 5px 0;
 }
-.deleteItem:hover{
+li i:hover{
     color: red;
-    transform: scale(1.1);
 }
-
-
-
-
 .clearAll{
 border-radius: 5px;
 width: 150px;
 height: 40px;
-/* margin: 50px 0; */
+margin: 10px auto;
 border: none;
 background-color: white;
 box-shadow: 2px 2px 2px 2px rgb(202, 8, 8);
-transition: 0.1s;
-display:block;
+transition: 1s;
+display:none;
 }
 .clearAll:hover{
     background-color: rgb(253, 40, 40);
+    color: white;
     cursor: pointer;
     transform: scale(1.1);
     box-shadow: 2px 2px 2px 2px black;
 }
+.alert{
+    background-color: #4A90E2;
+    /* z-index: 5; */
+    position: fixed;
+    width: 100%;
+    height:100vh ;
+    text-align: center;
+    padding-top: 30%;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    padding-top: 100px;
+    visibility: hidden;
+}
+.alert_box{
+    border: 2px 2px 2px black;
+    background-color: red;
+    height: 150px;
+    width: 250px;
+    display: block;
+    margin: auto;
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid black;
+}
+.alert button{
+    width: 80px;
+    border: none;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: white;
+    transition: 1s;
+}
+.alert button:nth-child(2){
+    box-shadow: 2px 2px 2px red;
 
+}
+.alert button:nth-child(3){
+    box-shadow: 2px 2px 2px green;
+
+}
+.alert button:nth-child(2):hover{
+    background-color: red;
+    box-shadow:2px 2px 2px 2px black;
+}
+.alert button:nth-child(3):hover{
+    background-color: rgb(33, 223, 33);
+    box-shadow: 2px 2px 2px 2px black;
+}
 @media(max-width:700px){
-    body{
-        background-color: white;
-    }
     .time{
-        margin: 5px auto;
-        font-size: 100%;
-        height: 20px;
-        width: 100px;
-        padding:5px 10px;
+        font-size: 18px;
+        height: 30px;
+        width: 120px;
+        padding:5px ;
     }
-    .input{
-        margin: 10px auto;
-        width: 90%;
+    form{
+        width: 100%;
     }
-  .addbtn{
-    margin: 10px auto;
-    width: 100px;
-  }     
-  .tasks{
-      /* background-color: red; */
-      width: 95%;
-      margin: 0 auto;
-      padding: 0;
-  }
-  .li{
-  }
-
-  .clearAll{
-      margin: 10px auto !important;
-  }
-  form{
-      padding: unset;
-      padding-top: 5px;
-      width: 100%;
-      margin: 0;
-  }
 }
