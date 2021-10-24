@@ -9,27 +9,22 @@ body{
     position: relative;
 }
 form{
-    box-shadow: 2px 2px 2px 2px rgb(117, 114, 114);
     background-color: white;
     margin: 0 auto;
     width: 600px;
     padding: 10px 10px 1px 10px;
-    /* border-radius: 0 0 10px 10px ; */
     height: 100vh;
 }
 .time{
+    width: 600px;
+    background-color: white;
     margin-bottom: 30px;
     color: #4A90E2 ;
-    width:fit-content;
     height: 40px;
-    width: 170px;
     font-size: 25px;
-    border-radius: 5px;
     padding: 10px;
     margin: 0 auto;
-    margin-bottom: 10px;
     text-align: center;
-    box-shadow: 2px 2px 2px 1px rgb(80, 80, 153);
 }
 
 .add{
@@ -88,7 +83,10 @@ li{
     flex-wrap: nowrap;
     justify-content: space-between;
     position: relative;
-    /* background-color: red; */
+    transition: 1s;
+}
+li:hover{
+    transform: scale(1.01);
 }
 .newTask{
     background-color:white;
@@ -101,6 +99,10 @@ li{
     overflow-x: auto ;
     overflow-y: hidden ;
     cursor: pointer;
+    transition: 1s;
+}
+.newTask:hover{
+    box-shadow: 2px 2px 2px 2px green;
 }
 .done{
     text-decoration: line-through;
@@ -118,9 +120,11 @@ li .deleteItem{
     width: 43px;
     height: 40px;
     border-radius: 0 5px 5px 0;
+    transition: 0.1s;
 }
 li .deleteItem:hover{
     color: red;
+    transform: scale(1.1);
 }
 .strikethrough{
     color: green;
@@ -134,12 +138,14 @@ li .deleteItem:hover{
     width: 43px;
     height: 40px;
     border-radius: 0 5px 5px 0;
+    transition: 0.1s;
 }
 .strikethrough:hover{
     color: rgb(0, 255, 0);
+    transform: scale(1.1);
 }
 .clearAll{
-border-radius: 5px;
+    border-radius: 5px;
 width: 150px;
 height: 40px;
 margin: 10px auto;
@@ -210,9 +216,7 @@ display:none;
 @media(max-width:700px){
     .time{
         font-size: 18px;
-        height: 30px;
-        width: 130px;
-        padding:5px ;
+        width: 100%;
     }
     form{
         width: 100%;

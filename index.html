@@ -18,8 +18,8 @@
                 <button class="cancelBtn">Cancel</button>
             </span>
         </div> -->
+        <div class="time"></div>
 <form >
-    <div class="time"></div>
     <div class="add">
         <input class="input" type="text" dir=auto placeholder="Enter a new task here ... " />
         <button class="addbtn">
@@ -28,6 +28,7 @@
     </div>
     <ol class="tasks"></ol>
     <button class="clearAll" type="text" title="Clear all the Tasks">Clear all</button>
+    <div id="visits">...</div>
 </form>
     </div>
 <script src="add.js"></script>    
@@ -37,6 +38,15 @@
 <script src="loadTasks.js"></script>    
 <script type="module" src="alert.js"></script>    
 <script type="module" src="strikethrough.js"></script>    
-<script type="module" src="showOptions.js"></script>    
+<script type="module" src="showOptions.js"></script> 
+
+
+<script>
+    function cb(response) {
+        document.getElementById('visits').innerText = 'Visits: '+response.value;
+    }
+    </script>
+    <script async src="https://api.countapi.xyz/hit/https://rumiani.github.io/new_todo/visits?callback=cb"></script>
+
 </body>
 </html>
