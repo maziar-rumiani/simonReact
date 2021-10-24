@@ -77,7 +77,7 @@ form{
 }
 .tasks{
     background-color: #4A90E2;
-    height: 400px;
+    height: 60vh;
     padding: 10px;
     overflow: auto;
     border-radius: 5px;
@@ -102,21 +102,41 @@ li{
     overflow-y: hidden ;
     cursor: pointer;
 }
-li i{
-    color: rgb(243, 117, 117);
+.done{
+    text-decoration: line-through;
+    background-color: rgb(122, 179, 66);
+}
+li .deleteItem{
+    color: rgb(251, 73, 73);
     cursor: pointer;
     margin-top: 10px;
     font-size: 40px;
     position: absolute;
     right: 0;
     visibility: hidden;
-    background-color: white;
+    /* background-color: white; */
     width: 43px;
     height: 40px;
     border-radius: 0 5px 5px 0;
 }
-li i:hover{
+li .deleteItem:hover{
     color: red;
+}
+.strikethrough{
+    color: green;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 40px;
+    position: absolute;
+    right: 40px;
+    visibility: hidden;
+    /* background-color: white; */
+    width: 43px;
+    height: 40px;
+    border-radius: 0 5px 5px 0;
+}
+.strikethrough:hover{
+    color: rgb(0, 255, 0);
 }
 .clearAll{
 border-radius: 5px;

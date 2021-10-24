@@ -19,8 +19,9 @@ function removeataskfromLS(listItem) {
     else {
       tasks = JSON.parse(localStorage.getItem('tasks'));
     }
+    // console.log(tasks);
     tasks.forEach(function (task,index) {
-      if(listItem.textContent ===task){
+      if(listItem.textContent ===task.task){
         tasks.splice(index,1);
       }
     });

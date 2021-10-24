@@ -14,6 +14,9 @@
     });
     }
 
+//unfocuse the clear button
+document.querySelector(".clearAll").blur()
+
     if(!document.querySelector('li')){
       document.querySelector('.clearAll').style.display = 'none'
     }
