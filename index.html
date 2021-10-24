@@ -8,6 +8,13 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
     <link rel="icon" href="taskfav.png">
     <title>TODO</title>
+    <script>
+    function cb(response) {
+        document.getElementById('visits').innerText = 'Visits: '+response.value;
+    }
+    </script>
+    <script async src="https://api.countapi.xyz/hit/rumiani.github.io/new_todo/visits?callback=cb"></script>
+    
 </head>
 <body>
     <div class="container">
@@ -39,14 +46,6 @@
 <script type="module" src="alert.js"></script>    
 <script type="module" src="strikethrough.js"></script>    
 <script type="module" src="showOptions.js"></script> 
-
-
-<script>
-    function cb(response) {
-        document.getElementById('visits').innerText = 'Visits: '+response.value;
-    }
-    </script>
-    <script async src="https://api.countapi.xyz/hit/rumiani.github.io/new_todo/visits?callback=cb"></script>
 
 </body>
 </html>
