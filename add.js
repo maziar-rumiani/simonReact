@@ -72,3 +72,12 @@ li.appendChild(li_remove);
     document.querySelector('.clearAll').style.display = 'block'
   }
 }
+
+
+let xhr = new XMLHttpRequest();
+xhr.open("GET", "https://api.countapi.xyz/hit/rumiani.github.io/new_todo/visits");
+xhr.responseType = "json";
+xhr.onload = function() {
+    document.getElementById('visits').innerText = 'Visits: '+this.response.value;
+}
+xhr.send();
