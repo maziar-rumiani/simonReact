@@ -80,7 +80,7 @@ form{
 li{
     margin: 0 auto;
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     justify-content: space-between;
     position: relative;
     transition: 1s;
@@ -115,16 +115,18 @@ li:hover{
 .strikethrough{
     color: green;
     cursor: pointer;
-    margin-top: 10px;
     font-size: 40px;
-    position: absolute;
-    right: 100px;
+    position:absolute;
+    z-index: 2;
     visibility: hidden;
-    /* background-color: white; */
-    width: 43px;
-    height: 40px;
-    border-radius: 0 5px 5px 0;
-    transition: 0.1s;
+    /* background-color: rgb(74, 144, 226); */
+    padding: 5px;
+    width: 50px;
+    height: 50px;
+    border-radius: 0 0 0 10px;
+    transition: 0.2s;
+    right: 100px;
+    top: 50px;
 }
 .strikethrough:hover{
     color: rgb(0, 255, 0);
@@ -133,15 +135,17 @@ li:hover{
 .edit{
     color: rgb(202, 202, 41);
     cursor: pointer;
-    margin-top: 10px;
-    font-size: 40px;
+    font-size: 38px;
     position: absolute;
-    right: 50px;
+    z-index: 2;
+    /* background-color: rgb(74, 144, 226); */
     visibility: hidden;
-    width: 43px;
-    height: 40px;
-    border-radius: 0 5px 5px 0;
-    transition: 0.1s;
+    padding: 5px;
+    width: 50px;
+    height: 50px;
+    transition: 0.2s;
+    right: 50px;
+    top: 50px;
 }
 .edit:hover{
     color: rgb(131, 131, 0);
@@ -158,14 +162,18 @@ li:hover{
     color: rgb(251, 73, 73);
     cursor: pointer;
     margin-top: 10px;
-    font-size: 40px;
+    font-size: 38px;
     position: absolute;
-    right: 0;
+    z-index: 2;
+    /* background-color: rgb(74, 144, 226); */
     visibility: hidden;
-    width: 43px;
-    height: 40px;
-    border-radius: 0 5px 5px 0;
-    transition: 0.1s;
+    padding: 10px;
+    width: 50px;
+    height: 50px;
+    border-radius: 0 0 10px 0;
+    transition: 0.2s;
+    right: 0;
+    top: 37px;
 }
 .delete:hover{
     color: red;

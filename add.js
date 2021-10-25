@@ -29,11 +29,11 @@ function addtask(e) {
     const li_delete  = document.createElement('i');
     //Adding classes to Icons
     li_text.className = 'li_text';
-    li_str.className="strikethrough fas fa-check-square";
+    li_str.className="strikethrough far fa-circle";
     li_edit.className="edit fas fa-edit";
     li_delete.className="delete fas fa-trash-alt";
     //Icons' titles
-    li_str.title = 'Strikethrough'
+    li_str.title = 'Done'
     li_edit.title = 'Edit'
     li_delete.title = 'delete'
     

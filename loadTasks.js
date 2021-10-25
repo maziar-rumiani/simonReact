@@ -11,11 +11,11 @@ tasks.forEach(function(task){
     const li_edit  = document.createElement('i');
     const li_delete  = document.createElement('i');
     li_text.className = 'li_text';
-    li_str.className="strikethrough fas fa-check-square";
+    li_str.className=task.status === "done" ?"strikethrough fas fa-check-square":"strikethrough far fa-circle";
     li_edit.className="edit fas fa-edit";
     li_delete.className="delete fas fa-trash-alt";
 
-    li_str.title = 'Strikethrough'
+    li_str.title = task.status === "done" ?'Undone':'Done'
     li_edit.title = 'Edit'
     li_delete.title = 'delete'
 
