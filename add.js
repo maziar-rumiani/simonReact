@@ -12,10 +12,10 @@ document.addEventListener('click',(e)=>{
 })
 
 let addbtn = document.querySelector(".addbtn").addEventListener("click",addtask);
-const input=document.querySelector(".input").value
 
 function addtask(e) {
   e.preventDefault();
+  const input=document.querySelector(".input").value
   
   if(input.trim() ===''){
     document.querySelector('.input').value = "";
