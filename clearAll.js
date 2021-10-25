@@ -3,7 +3,7 @@
   function clearAlltasks(e) {
     console.log('Whyyyyyyyyyy?');
     e.preventDefault();
-    if(!document.querySelector('.deleteItem')) return alert("There's nothing to delete")
+    if(!document.querySelector('.delete')) return alert("There's nothing to delete")
     let tasks = document.querySelectorAll('li')
     if(confirm("Are you sure?")){
       localStorage.removeItem('tasks');

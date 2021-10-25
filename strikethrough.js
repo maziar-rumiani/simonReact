@@ -1,30 +1,44 @@
+let tasks = getTasksFromLocal()
 document.body.addEventListener("click",(e)=>{
-    let tasks = JSON.parse(localStorage.getItem('tasks'));
-    if(e.target.previousSibling.classList.contains('done')){
-        e.target.previousSibling.classList.remove('done')
-        for(let task of tasks){
-            if(task.id === +e.target.previousSibling.id){
-                task.status = 'undone'
-            }
+    if(e.target.classList.contains('strikethrough')){
+        if(e.target.previousSibling.classList.contains('done')){
+            undoneTask(e.target)
+        } 
+        else if(e.target.previousSibling.classList.contains('li_text')){
+            doneTask(e.target)
+            console.log(e.target);
         }
-        // tasks[+e.target.previousSibling.id].status = 'undone'
-    } 
-    else if(e.target.previousSibling.classList.contains('newTask')){
-        e.target.previousSibling.classList.add('done')
-        console.log(e.target.previousSibling.id);
-        console.log(tasks[+e.target.previousSibling.id]);
+        saveTasksToLocal()
+    }
+});
 
-        for(let task of tasks){
-            if(task.id === +e.target.previousSibling.id){
+
+
+function getTasksFromLocal(){
+    return JSON.parse(localStorage.getItem('tasks'));
+}
+
+function saveTasksToLocal(){
+    let tasksArray=JSON.stringify(tasks);
+    localStorage.setItem('tasks', tasksArray);
+}
+
+function doneTask(doneBtn){
+    doneBtn.previousSibling.classList.add('done')
+    for(let task of tasks){
+        if(task.id === +doneBtn.parentElement.id){
+                console.log(doneBtn);
                 task.status = 'done'
             }
         }
+}
 
-    }
-
-    let tasksArray=JSON.stringify(tasks);
-    localStorage.setItem('tasks', tasksArray);
-
+function undoneTask(doneBtn){
+    doneBtn.previousSibling.classList.remove('done')
     console.log(tasks);
-});
-
+        for(let task of tasks){
+            if(task.id === +doneBtn.parentElement.id){
+                task.status = 'undone'
+            }
+        }
+}

@@ -88,7 +88,7 @@ li{
 li:hover{
     transform: scale(1.01);
 }
-.newTask{
+.li_text{
     background-color:white;
     border-radius: 5px;
     width: 100%;
@@ -100,31 +100,17 @@ li:hover{
     overflow-y: hidden ;
     cursor: pointer;
     transition: 1s;
+    border: none;
 }
-.newTask:hover{
+.li_text:hover{
     box-shadow: 2px 2px 2px 2px green;
+}
+.li_text:focus{
+    outline: none;
 }
 .done{
     text-decoration: line-through;
     background-color: rgb(122, 179, 66);
-}
-li .deleteItem{
-    color: rgb(251, 73, 73);
-    cursor: pointer;
-    margin-top: 10px;
-    font-size: 40px;
-    position: absolute;
-    right: 0;
-    visibility: hidden;
-    /* background-color: white; */
-    width: 43px;
-    height: 40px;
-    border-radius: 0 5px 5px 0;
-    transition: 0.1s;
-}
-li .deleteItem:hover{
-    color: red;
-    transform: scale(1.1);
 }
 .strikethrough{
     color: green;
@@ -132,7 +118,7 @@ li .deleteItem:hover{
     margin-top: 10px;
     font-size: 40px;
     position: absolute;
-    right: 40px;
+    right: 100px;
     visibility: hidden;
     /* background-color: white; */
     width: 43px;
@@ -142,6 +128,47 @@ li .deleteItem:hover{
 }
 .strikethrough:hover{
     color: rgb(0, 255, 0);
+    transform: scale(1.1);
+}
+.edit{
+    color: rgb(202, 202, 41);
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 40px;
+    position: absolute;
+    right: 50px;
+    visibility: hidden;
+    width: 43px;
+    height: 40px;
+    border-radius: 0 5px 5px 0;
+    transition: 0.1s;
+}
+.edit:hover{
+    color: rgb(131, 131, 0);
+    transform: scale(1.1);
+}
+.onEdit{
+    background-color: rgb(255, 255, 101);
+    outline: outset;
+}
+.onEdit:focus{
+    outline: outset;
+}
+.delete{
+    color: rgb(251, 73, 73);
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 40px;
+    position: absolute;
+    right: 0;
+    visibility: hidden;
+    width: 43px;
+    height: 40px;
+    border-radius: 0 5px 5px 0;
+    transition: 0.1s;
+}
+.delete:hover{
+    color: red;
     transform: scale(1.1);
 }
 .clearAll{

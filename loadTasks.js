@@ -1,26 +1,34 @@
 // see the saved tasks when open the browser again
 let tasks = JSON.parse(localStorage.getItem('tasks'));
-console.log(tasks);
+
 if(localStorage.getItem('tasks') === null) {
     tasks = [];}
 else{
 tasks.forEach(function(task){
     const li  = document.createElement('li');
-    const li_text  = document.createElement('p');
-    const li_remove  = document.createElement('i');
-    const li_ST  = document.createElement('i');
-    li_text.className = 'newTask';
-    li_remove.className="deleteItem fas fa-window-close";
-    li_ST.className="strikethrough fas fa-check-square";
-    li_ST.title = 'strikethrough'
-    li_remove.title = 'Remove'
-    li_text.appendChild(document.createTextNode(task.task));
+    const li_text  = document.createElement('input');
+    const li_str  = document.createElement('i');
+    const li_edit  = document.createElement('i');
+    const li_delete  = document.createElement('i');
+    li_text.className = 'li_text';
+    li_str.className="strikethrough fas fa-check-square";
+    li_edit.className="edit fas fa-edit";
+    li_delete.className="delete fas fa-trash-alt";
+
+    li_str.title = 'Strikethrough'
+    li_edit.title = 'Edit'
+    li_delete.title = 'delete'
+
+    li_text.readOnly = 'readOnly';
+
+    li_text.value = task.task;
+
     li.appendChild(li_text);
-    li.appendChild(li_ST)
-    li.appendChild(li_remove);
+    li.appendChild(li_str)
+    li.appendChild(li_edit)
+    li.appendChild(li_delete);
     // add ID to each task in li
-    li_text.id = `${task.id}`;
-    console.log(task);
+    li.id = `${task.id}`;
     if(task.status === 'done')li_text.classList.add('done')
 
 
