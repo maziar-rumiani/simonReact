@@ -96,8 +96,7 @@ li:hover{
     font-size: 22px;
     margin: 10px 0;
     padding: 5px;
-    overflow-x: auto ;
-    overflow-y: hidden ;
+    overflow-x: auto;
     cursor: pointer;
     transition: 1s;
     border: none;

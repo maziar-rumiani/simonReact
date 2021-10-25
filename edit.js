@@ -1,11 +1,12 @@
 document.body.addEventListener("click",editHandler)
 
 function editHandler (e){
-console.log(e);
+// console.log(e);
     if(e.target.classList.contains('edit')){
 
         let tasks = JSON.parse(localStorage.getItem('tasks'));
         let li_text = e.target.previousSibling.previousSibling
+        console.log(li_text.value);
         if(li_text.readOnly){
             li_text.removeAttribute('readonly')
             li_text.focus();
@@ -34,11 +35,11 @@ console.log(e);
     }
 };
 
-document.body.addEventListener("keyup", (e)=> {
-    console.log(e.key);
-    if (e.key === 'Enter') {
-      // Cancel the default action, if needed
-      e.preventDefault();
-      editHandler(e)
-    }
-});
+// document.body.addEventListener("keyup", (e)=> {
+//     console.log(e.key);
+//     if (e.key === 'Enter') {
+//       // Cancel the default action, if needed
+//       e.preventDefault();
+//       editHandler(e)
+//     }
+// });

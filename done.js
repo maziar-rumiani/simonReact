@@ -1,6 +1,8 @@
-let tasks = getTasksFromLocal()
+let tasks;
 document.body.addEventListener("click",(e)=>{
     if(e.target.classList.contains('strikethrough')){
+        tasks = getTasksFromLocal()
+        console.log(e.target.previousSibling);
         if(e.target.previousSibling.classList.contains('done')){
             undoneTask(e.target)
             e.target.classList.remove('fas')
@@ -33,6 +35,7 @@ function saveTasksToLocal(){
 }
 
 function doneTask(doneBtn){
+    console.log(doneBtn);
     doneBtn.previousSibling.classList.add('done')
     for(let task of tasks){
         if(task.id === +doneBtn.parentElement.id){
@@ -44,7 +47,6 @@ function doneTask(doneBtn){
 
 function undoneTask(doneBtn){
     doneBtn.previousSibling.classList.remove('done')
-    console.log(tasks);
         for(let task of tasks){
             if(task.id === +doneBtn.parentElement.id){
                 task.status = 'undone'
