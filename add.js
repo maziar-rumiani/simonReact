@@ -18,7 +18,13 @@ function addtask(e) {
   id = new Date().getTime()
   
   input=document.querySelector(".input").value
-  ifEmptey()
+  // ifEmptey
+  if(input.trim() ===''){
+    document.querySelector('.input').value = "";
+     document.querySelector(".input").focus()
+     return
+  }
+
   const li  = document.createElement('li');
   li.id = id;
   document.querySelector('.tasks').appendChild(li);
@@ -57,15 +63,7 @@ function addtask(e) {
   }
   cleanInput()
 }
-  
 
-function ifEmptey(){
-  console.log('ifffffff');
-  if(input.trim() ===''){
-    document.querySelector('.input').value = "";
-    return document.querySelector(".input").focus()
-  }
-}
 function cleanInput(){
   document.querySelector('.input').value = "";
 }

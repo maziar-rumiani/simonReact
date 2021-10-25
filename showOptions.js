@@ -15,7 +15,8 @@ document.addEventListener('click',(e)=>{
       })
 
     let el = e.target.nextSibling;
-    if(e.target.classList.contains('li_text') && show){
+    console.log(e.target);
+    if(e.target.classList.contains('li_text') && show ){
 
         el.style.visibility = 'visible'
         el.nextSibling.style.visibility = 'visible'
