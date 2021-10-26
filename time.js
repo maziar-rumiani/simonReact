@@ -1,5 +1,5 @@
 // time
-let dayArr = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+let dayArr = ['Zaterdag','Maandag','Dinsdag','Woensdag','Donderdag','Vrijdag','Zaterdag'];
 let time= new(Date);
 setInterval(() => {
   time= new(Date);

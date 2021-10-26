@@ -11,7 +11,7 @@ function editHandler (e){
             li_text.removeAttribute('readonly')
             li_text.focus();
             li_text.classList.add('onEdit')
-            e.target.title = 'Save'
+            e.target.title = 'Opslaan'
             e.target.classList.remove('fa-check-square')
             e.target.classList.add('fa-save')
         }
@@ -22,7 +22,7 @@ function editHandler (e){
                 if(task.id === +li_text.parentElement.id){
                     task.task = li_text.value
 
-                    e.target.title = 'Edit'
+                    e.target.title = 'Bewerking'
                     e.target.classList.remove('fa-save')
                     e.target.classList.add('fa-check-square')
                 }

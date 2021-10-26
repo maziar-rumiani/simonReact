@@ -38,15 +38,15 @@ function addtask(e) {
   li.appendChild(li_text)
   const li_str  = document.createElement('i');
   li_str.className="strikethrough far fa-circle";
-  li_str.title = 'Done'
+  li_str.title = 'Gedaan'
   li.appendChild(li_str)
   const li_edit  = document.createElement('i');
   li_edit.className="edit fas fa-edit";
-  li_edit.title = 'Edit'
+  li_edit.title = 'Bewerking'
   li.appendChild(li_edit)
   const li_delete  = document.createElement('i');
   li_delete.className="delete fas fa-trash-alt";
-  li_delete.title = 'delete'
+  li_delete.title = 'Verwijderen'
   li.appendChild(li_delete);
 
     if(localStorage.getItem('tasks') === null) {

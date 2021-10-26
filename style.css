@@ -34,7 +34,7 @@ form{
 }
 .undones{
     width: 30px;
-    font-size: 20px;
+    /* font-size: 20px; */
     height: 30px;
     background-color: red;
     border-radius: 50%;
@@ -238,15 +238,15 @@ li:hover{
     border: 2px 2px 2px black;
     background-color: red;
     height: 170px;
-    width: 250px;
+    width: 260px;
     display: block;
     margin: auto;
-    padding: 10px;
+    padding-top: 10px;
     border-radius: 10px;
     border: 2px solid black;
 }
 .alert button{
-    width: 80px;
+    width: 110px;
     border: none;
     font-size: 20px;
     padding: 10px;
@@ -255,18 +255,18 @@ li:hover{
     background-color: white;
 }
 .alert button:nth-child(2){
-    box-shadow: 2px 2px 2px red;
+    box-shadow: 2px 2px 2px green;
 }
 .alert button:nth-child(3){
-    box-shadow: 2px 2px 2px green;
+    box-shadow: 2px 2px 2px red;
 
 }
 .alert button:nth-child(2):hover{
-    background-color: red;
+    background-color: rgb(33, 223, 33);
     box-shadow:2px 2px 2px 2px black;
 }
 .alert button:nth-child(3):hover{
-    background-color: rgb(33, 223, 33);
+    background-color: red;
     box-shadow: 2px 2px 2px 2px black;
 }
 
