@@ -1,11 +1,12 @@
 // time
 let dayArr = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
-let time;
+let time= new(Date);
 setInterval(() => {
   time= new(Date);
+}, 60000);
   let hour= time.getHours();
   let min = time.getMinutes();
   let sec = time.getSeconds();
-  let day = dayArr[new Date().getDay()];
-  document.querySelector(".time").innerHTML = (hour<10?'0':'')+hour + ":" +(min<10?'0':'')+ min +":" +(sec<10?'0':'')+ sec + " - " + day;
-}, 1000);
+  let day = dayArr[new Date().getDay()];  
+document.querySelector(".time").innerHTML = (hour<10?'0':'')+hour + ":" +(min<10?'0':'')+ min +" - " + `<strong>${day}</strong>`;
+

@@ -1,8 +1,9 @@
+import numberOfUndones from './numberOfUndones.js'
 let tasks;
 document.body.addEventListener("click",(e)=>{
     if(e.target.classList.contains('strikethrough')){
         tasks = getTasksFromLocal()
-        console.log(e.target.previousSibling);
+
         if(e.target.previousSibling.classList.contains('done')){
             undoneTask(e.target)
             e.target.classList.remove('fas')
@@ -21,6 +22,7 @@ document.body.addEventListener("click",(e)=>{
             e.target.title = 'Undone'
         }
         saveTasksToLocal()
+        numberOfUndones()
     }
 });
 
@@ -35,12 +37,12 @@ function saveTasksToLocal(){
 }
 
 function doneTask(doneBtn){
-    console.log(doneBtn);
+
     doneBtn.previousSibling.classList.add('done')
     for(let task of tasks){
         if(task.id === +doneBtn.parentElement.id){
-                console.log(doneBtn);
-                task.status = 'done'
+
+            task.status = 'done'
             }
         }
 }
@@ -53,3 +55,5 @@ function undoneTask(doneBtn){
             }
         }
 }
+
+

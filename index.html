@@ -18,14 +18,17 @@
 </head>
 <body>
     <div class="container">
-        <!-- <div class="alert">
+        <div class="alert">
             <span class="alert_box">
                 <p>Are you sure?</p>
                 <button class="yesBtn">Yes</button>
                 <button class="cancelBtn">Cancel</button>
             </span>
-        </div> -->
-        <div class="time"></div>
+        </div>
+        <div class="header">
+            <span class="time"></span>
+            <span class="undones" title='Number of undone tasks'></span>
+        </div>
 <form >
     <div class="add">
         <input class="input" type="text" dir=auto placeholder="Enter a new task here ... " />
@@ -38,13 +41,14 @@
     <p id="visits">...</p>
 </form>
     </div>
-<script src="add.js"></script>    
-<script src="time.js"></script>    
+<script type="module" src="add.js"></script>    
+<script type="module" src="showAddBtn.js"></script>    
+<script type="module" src="time.js"></script>    
 <script type="module" src="clear.js"></script>    
-<script src="clearAll.js"></script>    
-<script src="loadTasks.js"></script>    
+<script type="module" src="clearAll.js"></script>    
+<script type="module" src="loadTasks.js"></script>    
 <script type="module" src="alert.js"></script>    
-<script type="module" src="done.js"></script>    
+<script  type="module" src="done.js"></script>    
 <script type="module" src="edit.js"></script>    
 <script type="module" src="showOptions.js"></script> 
 <script type="module" src="visits.js"></script> 

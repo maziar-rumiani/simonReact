@@ -1,5 +1,8 @@
+import numberOfUndones from './numberOfUndones.js'
+
+// import numberOfUndones from './time'
 document.addEventListener('click',(e)=>{
-  console.log(e.target);
+
   if(e.target.className ==='input' || e.target.classList.contains ('fa-plus-square')){
     document.querySelector(".addbtn").style.visibility = 'visible'
   }
@@ -62,6 +65,7 @@ function addtask(e) {
     showClearAll()
   }
   cleanInput()
+  numberOfUndones()
 }
 
 function cleanInput(){

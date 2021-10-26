@@ -1,19 +1,41 @@
+import numberOfUndones from './numberOfUndones.js'
+// import confirmResult from './confirmResult.js'
 //   clear each task by pressing the x button from the page
+let element
 document.body.addEventListener("click",clearTask);
  function clearTask(e) {
    e.preventDefault()
-   console.log('clear');
+   element = e.target.parentElement
    if(e.target.className.includes('delete')){
-        if(confirm("Are you sure?")){
-         e.target.parentElement.remove();
-        //  console.log(e.target.parentElement);
-         removeataskfromLS(e.target.parentElement);
-        }
- }
-// //   clear each task by pressing the x button from localstorage
+      document.querySelector('.alert').style.visibility = 'visible';      
+    }
+  
 }
+  
+  document.querySelector('.yesBtn').addEventListener('click',()=>{
+    console.log(element.tagName);
+    if(element.tagName === 'LI')element.remove();  
+
+    removeataskfromLS(element);
+    document.querySelector('.alert').style.visibility = 'hidden'; 
+    return true;     
+  })
+  document.querySelector('.cancelBtn').addEventListener('click',()=>{
+    document.querySelector('.alert').style.visibility = 'hidden';      
+    return false;
+  })
+
+
+
+
+
+
+
+
+
+
 function removeataskfromLS(listItem) {
-  console.log(+listItem.id);
+
   let tasks;
   if(localStorage.getItem('tasks') === null) {
     tasks = [];
@@ -21,16 +43,18 @@ function removeataskfromLS(listItem) {
   else {
     tasks = JSON.parse(localStorage.getItem('tasks'));
   }
-  // console.log(listItem);
+
   tasks.forEach(function (task,index) {
     if(task.id === +listItem.id){
       tasks.splice(index,1);
-      console.log(tasks);
+
     }
   });
-  // console.log(tasks);
-    localStorage.setItem("tasks", JSON.stringify(tasks))
+
+  localStorage.setItem("tasks", JSON.stringify(tasks))
 
     if(tasks.length<2)
     document.querySelector('.clearAll').style.display = 'none'
+
+    numberOfUndones()
 }

@@ -1,5 +1,6 @@
+import numberOfUndones from './numberOfUndones.js'
 // see the saved tasks when open the browser again
-tasks = JSON.parse(localStorage.getItem('tasks'));
+let tasks = JSON.parse(localStorage.getItem('tasks'));
 
 if(localStorage.getItem('tasks') === null) {
   tasks = [];}
@@ -31,6 +32,7 @@ if(localStorage.getItem('tasks') === null) {
   if(tasks.length>1){
     showClearAll()
   }
+  numberOfUndones()
 }
 
 
