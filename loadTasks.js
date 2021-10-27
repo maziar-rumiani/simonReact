@@ -15,16 +15,16 @@ if(localStorage.getItem('tasks') === null) {
       li.appendChild(li_text);
       if(task.status === 'done')li_text.classList.add('done')
       const li_str  = document.createElement('i');
-      li_str.title = task.status === "done" ?'Ongedaan':'Gedaan'
+      li_str.title = task.status === "Done" ?'Undone':'Done'
       li_str.className=task.status === "done" ?"strikethrough fas fa-check-square":"strikethrough far fa-circle";
       li.appendChild(li_str)
       const li_edit  = document.createElement('i');
-      li_edit.title = 'Bewerking'
+      li_edit.title = 'Edit'
       li_edit.className="edit fas fa-edit";
       li.appendChild(li_edit)
       const li_delete  = document.createElement('i');
       li_delete.className="delete fas fa-trash-alt";
-      li_delete.title = 'verwijderen'
+      li_delete.title = 'Delete'
       li.appendChild(li_delete);
 
       document.querySelector('.tasks').appendChild(li);

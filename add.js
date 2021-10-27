@@ -38,11 +38,11 @@ function addtask(e) {
   li.appendChild(li_text)
   const li_str  = document.createElement('i');
   li_str.className="strikethrough far fa-circle";
-  li_str.title = 'Gedaan'
+  li_str.title = 'Done'
   li.appendChild(li_str)
   const li_edit  = document.createElement('i');
   li_edit.className="edit fas fa-edit";
-  li_edit.title = 'Bewerking'
+  li_edit.title = 'Edit'
   li.appendChild(li_edit)
   const li_delete  = document.createElement('i');
   li_delete.className="delete fas fa-trash-alt";
@@ -74,3 +74,4 @@ function cleanInput(){
 function showClearAll(){
   document.querySelector('.clearAll').style.display = 'block'
 }
+

@@ -1,4 +1,3 @@
-let show = true;
 document.addEventListener('click',(e)=>{
 
   document.querySelectorAll('.strikethrough').forEach((element)=>{
@@ -15,7 +14,7 @@ document.addEventListener('click',(e)=>{
 
   let el = e.target.nextSibling;
 
-  if(e.target.classList.contains('li_text') && show ){
+  if(e.target.classList.contains('li_text')  ){
 
     el.style.visibility = 'visible'
     el.nextSibling.style.visibility = 'visible'
@@ -27,5 +26,4 @@ document.addEventListener('click',(e)=>{
     else{
         // el.style.paddingRight = '10px';  
     }
-    show = !show
   })

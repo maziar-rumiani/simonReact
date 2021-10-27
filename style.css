@@ -31,10 +31,11 @@ form{
     padding-top: 10px;
     margin: 0 auto;
     text-align: center;
+    cursor: default;
 }
 .undones{
+    cursor: default;
     width: 30px;
-    /* font-size: 20px; */
     height: 30px;
     background-color: red;
     border-radius: 50%;
@@ -45,6 +46,21 @@ form{
     visibility: hidden;
 }
 .undones:hover{
+    transform: scale(1.1);
+}
+.lang{
+    width: 30px;
+    /* font-size: 20px; */
+    height: 30px;
+    background-color: red;
+    border-radius: 50%;
+    padding: 5px;
+    position: absolute;
+    left: 10%;
+    transition: 0.5s;
+    cursor: pointer;
+}
+.lang:hover{
     transform: scale(1.1);
 }
 
@@ -284,5 +300,8 @@ li:hover{
     }
     form{
         width: 100%;
+    }
+    .alert{
+        font-size: 25px;
     }
 }

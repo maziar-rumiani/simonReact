@@ -8,36 +8,30 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
     <link rel="icon" href="taskfav.png">
     <title>TODO</title>
-    <!-- <script>
-    function cb(response) {
-        document.getElementById('visits').innerText = 'Visits: '+response.value;
-    }
-    </script>
-    <script async src="https://api.countapi.xyz/hit/rumiani.github.io/new_todo/visits?callback=cb"></script>
-     -->
 </head>
 <body>
     <div class="container">
         <div class="alert">
             <span class="alert_box">
-                <p>Weet je zeker dat?</p>
-                <button class="yesBtn">Ja</button>
-                <button class="cancelBtn">Annuleren</button>
+                <p data-inner>sure</p>
+                <button class="yesBtn" data-inner>yes</button>
+                <button class="cancelBtn" data-inner>cancel</button>
             </span>
         </div>
         <div class="header">
+            <!-- <span class="lang" data-inner>lang</span> -->
             <span class="time"></span>
-            <span class="undones" title='Aantal ongedaan gemaakte taken'></span>
+            <span class="undones" data-title title='Number of undoone tasks'></span>
         </div>
 <form >
     <div class="add">
-        <input class="input" type="text" dir=auto placeholder="Voer hier een nieuwe taak in ... " />
+        <input class="input" type="text" data-place dir=auto placeholder="Enter a new task here ..." />
         <button class="addbtn">
-            <i class=" fas fa-plus-square" title="Add the task"></i>
+            <i class=" fas fa-plus-square" data-title title="Add the task"></i>
         </button>
     </div>
     <ol class="tasks"></ol>
-    <button class="clearAll" type="text" title="Wis alle taken">Verwijder alles</button>
+    <button class="clearAll" type="text" data-inner data-title title="Clear all the tasks">clearAll</button>
     <p id="visits">...</p>
 </form>
     </div>
@@ -47,11 +41,12 @@
 <script type="module" src="clear.js"></script>    
 <script type="module" src="clearAll.js"></script>    
 <script type="module" src="loadTasks.js"></script>    
-<script type="module" src="alert.js"></script>    
 <script  type="module" src="done.js"></script>    
 <script type="module" src="edit.js"></script>    
 <script type="module" src="showOptions.js"></script> 
+<script type="module" src="delete.js"></script> 
 <script type="module" src="visits.js"></script> 
+<!-- <script type="module" src="lang.js"></script>  -->
 
 </body>
 </html>
