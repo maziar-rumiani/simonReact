@@ -46,7 +46,7 @@ function addtask(e) {
   li.appendChild(li_edit)
   const li_delete  = document.createElement('i');
   li_delete.className="delete fas fa-trash-alt";
-  li_delete.title = 'Verwijderen'
+  li_delete.title = 'Delete'
   li.appendChild(li_delete);
 
     if(localStorage.getItem('tasks') === null) {
