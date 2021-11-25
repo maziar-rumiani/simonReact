@@ -1,5 +1,4 @@
 export default function numberOfUndones() {
-
     let tasks = JSON.parse(localStorage.getItem('tasks'));
     let num = tasks.filter(t => t.status === 'undone').length
     num = num || 0

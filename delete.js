@@ -1,10 +1,7 @@
 import numberOfUndones from './numberOfUndones.js'
-let element;
 document.body.addEventListener("click",alert);
  function alert(e) {
    e.preventDefault()
-//    element = e.target.parentElement
-
    if(e.target.className.includes('delete') ){
       document.querySelector('.alert').style.visibility = 'visible';      
       e.target.parentElement.classList.add('confirmDelete')
