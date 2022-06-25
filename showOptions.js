@@ -1,5 +1,7 @@
 document.addEventListener('click',(e)=>{
-
+  document.querySelectorAll('.createdDate').forEach((element)=>{
+    element.style.visibility = 'hidden'
+  })
   document.querySelectorAll('.strikethrough').forEach((element)=>{
     element.style.visibility = 'hidden'
   })
@@ -13,12 +15,13 @@ document.addEventListener('click',(e)=>{
   document.querySelectorAll('.li_text').forEach( element => element.style.marginBottom= '10px')
 
   let el = e.target.nextSibling;
-
+console.log(e.target);
   if(e.target.classList.contains('li_text')  ){
 
     el.style.visibility = 'visible'
     el.nextSibling.style.visibility = 'visible'
     el.nextSibling.nextSibling.style.visibility = 'visible'
+    el.nextSibling.nextSibling.nextSibling.style.visibility = 'visible'
     
     e.target.style.marginBottom= '50px';
       // e.target.style.background = 'red';

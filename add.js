@@ -16,8 +16,15 @@ let input;
 let tasks;
 let task;
 let id;
+const months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+
 function addtask(e) {
   e.preventDefault();
+  const createdDate = new Date()
+  const month = months[createdDate.getMonth()];
+  let day = createdDate.getDay(); 
+  const date ="- Created at: " + month +" "+day ;
+
   id = new Date().getTime()
   
   input=document.querySelector(".input").value
@@ -49,12 +56,17 @@ function addtask(e) {
   li_delete.title = 'Delete'
   li.appendChild(li_delete);
 
+  const p_date = document.createElement('p')
+  p_date.className = 'createdDate'
+  p_date.innerText = date
+  li.appendChild(p_date);
+
     if(localStorage.getItem('tasks') === null) {
       tasks = [];
     } else {
       tasks = JSON.parse(localStorage.getItem('tasks'));
     }
-    task = {id:id,task:input,status:'undone'}
+    task = {id:id,task:input,status:'undone',date:date}
 
     tasks.push(task);
 

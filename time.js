@@ -6,6 +6,7 @@ setInterval(() => {
   let hour= time.getHours();
   let min = time.getMinutes();
   let sec = time.getSeconds();
-  let day = weekDays[new Date().getDay()];  
+  let day = weekDays[new Date().getDay()]; 
+ 
 document.querySelector(".time").innerHTML = (hour<10?'0':'')+hour + ":" +(min<10?'0':'')+ min + ' _ ' + ` <strong>${day}</strong>`;
 

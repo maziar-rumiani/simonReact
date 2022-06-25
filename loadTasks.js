@@ -26,6 +26,11 @@ if(localStorage.getItem('tasks') === null) {
       li_delete.className="delete fas fa-trash-alt";
       li_delete.title = 'Delete'
       li.appendChild(li_delete);
+      const li_time  = document.createElement('p');
+      li_time.className="createdDate";
+      li_time.innerText = task.date
+      li.appendChild(li_time);
+      const p_date = document.createElement('p')
 
       document.querySelector('.tasks').appendChild(li);
   });
