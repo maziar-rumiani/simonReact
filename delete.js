@@ -16,14 +16,11 @@ document.querySelector('.yesBtn').addEventListener("click",deleteHandler);
 function deleteHandler(e) {
     let tasks = JSON.parse(localStorage.getItem('tasks'));    
     document.querySelectorAll('.confirmDelete').forEach( el => {
-        console.log(el);
         tasks.forEach( (task,index)=> {
-            console.log(task);
           if(task.id === +el.id){
             tasks.splice(index,1);
           }
         });
-        console.log(tasks);
         localStorage.setItem("tasks", JSON.stringify(tasks))
         el.remove()
     })
@@ -37,7 +34,6 @@ function deleteHandler(e) {
 
 document.querySelector('.cancelBtn').addEventListener("click",cancelDelete);
 function cancelDelete(e) {
-    console.log(2);
     document.querySelectorAll('li').forEach(el => el.classList.remove('confirmDelete'))
     document.querySelector('.alert').style.visibility = 'hidden';      
 

@@ -15,7 +15,6 @@ document.addEventListener('click',(e)=>{
   document.querySelectorAll('.li_text').forEach( element => element.style.marginBottom= '10px')
 
   let el = e.target.nextSibling;
-console.log(e.target);
   if(e.target.classList.contains('li_text')  ){
 
     el.style.visibility = 'visible'
