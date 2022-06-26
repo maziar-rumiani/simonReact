@@ -22,7 +22,7 @@ function addtask(e) {
   e.preventDefault();
   const createdDate = new Date()
   const month = months[createdDate.getMonth()];
-  let day = createdDate.getDay(); 
+  let day = createdDate.getDate(); 
   const date ="- Created at: " + month +" "+day ;
 
   id = new Date().getTime()
