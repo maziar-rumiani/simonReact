@@ -4,5 +4,6 @@ export default function numberOfUndones() {
     num = num || 0
 
     document.querySelector('.undones').innerHTML = num
-    document.querySelector('.undones').style.visibility = num === 0?'hidden':'visible'
+      document.querySelector('.undones').style.visibility = num === 0?'hidden':'visible'
+      document.querySelector('.clearAll').style.display =  num === 0?'hidden':'block'
   }

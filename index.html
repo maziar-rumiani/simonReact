@@ -21,6 +21,7 @@
         <div class="header">
             <span class="time"></span>
             <span class="undones" data-title title='Number of undone tasks'></span>
+            <span class="dones" data-title title='Number of undone tasks'></span>
         </div>
 <form >
     <div class="add">
@@ -30,7 +31,8 @@
         </button>
     </div>
     <ol class="tasks"></ol>
-    <button class="clearAll" type="text" data-inner data-title title="Clear all the tasks">clearAll</button>
+    <button class="clearAll" type="text" data-inner data-title title="Clear all the tasks">Clear All</button>
+    <button class="undoAll" type="text" data-inner data-title title="Undo all the tasks">Undo All</button>
     <p id="visits">...</p>
 </form>
     </div>
@@ -45,6 +47,10 @@
 <script type="module" src="showOptions.js"></script> 
 <script type="module" src="delete.js"></script> 
 <script type="module" src="visits.js"></script> 
+<script type="module" src="visits.js"></script> 
+<script type="module" src="numberOfDones.js"></script> 
+
+
 <!-- <script type="module" src="lang.js"></script>  -->
 
 </body>

@@ -1,3 +1,4 @@
+import numberOfdones from './numberOfDones.js';
 import numberOfUndones from './numberOfUndones.js'
 // see the saved tasks when open the browser again
 let tasks = JSON.parse(localStorage.getItem('tasks'));
@@ -38,6 +39,7 @@ if(localStorage.getItem('tasks') === null) {
     showClearAll()
   }
   numberOfUndones()
+  numberOfdones()
 }
 
 

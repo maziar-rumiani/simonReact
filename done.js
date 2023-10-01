@@ -1,3 +1,4 @@
+import numberOfdones from './numberOfDones.js';
 import numberOfUndones from './numberOfUndones.js'
 let tasks;
 document.body.addEventListener("click",(e)=>{
@@ -23,6 +24,7 @@ document.body.addEventListener("click",(e)=>{
         }
         saveTasksToLocal()
         numberOfUndones()
+        numberOfdones()
     }
 });
 
