@@ -1,327 +1,304 @@
-body{
-    margin: 0;
+body {
+  margin: 0;
 }
-*{
-    box-sizing: border-box;
+* {
+  box-sizing: border-box;
 }
-.container{
-    position: relative;
+.container {
+  position: relative;
 }
-form{
-    background-color: white;
-    margin: 0 auto;
-    width: 600px;
-    padding: 10px 10px 1px 10px;
-    height: 90vh;
+form {
+  background-color: white;
+  margin: 0 auto;
+  width: 600px;
+  padding: 10px 10px 1px 10px;
+  height: 90vh;
 }
-.header{
-    width: 600px;
-    height: 10vh;
-    padding-top: 10px;
-    margin: 0 auto;
-    text-align: center;
-    position: relative;
+.header {
+  width: 600px;
+  height: 10vh;
+  padding-top: 10px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
 }
-.time{
-    width: 80%;
-    color: #4A90E2 ;
-    height: 10vh;
-    font-size: 30px;
-    padding-top: 10px;
-    margin: 0 auto;
-    text-align: center;
-    cursor: default;
+.time {
+  width: 80%;
+  color: #4a90e2;
+  height: 10vh;
+  font-size: 30px;
+  padding-top: 10px;
+  margin: 0 auto;
+  text-align: center;
+  cursor: default;
 }
-.undones{
-    cursor: default;
-    width: 30px;
-    height: 30px;
-    background-color: rgb(209, 2, 2);
-    border-radius: 50%;
-    padding: 5px;
-    position: absolute;
-    right: 10%;
-    transition: 0.5s;
-    visibility: hidden;
-    color: white;
-}
-.dones{
-    cursor: default;
-    width: 30px;
-    height: 30px;
-    background-color: rgb(17, 166, 17);
-    border-radius: 50%;
-    padding: 5px;
-    position: absolute;
-    right: 20%;
-    transition: 0.5s;
-    visibility: hidden;
-    color: white;
-}
-.undones:hover{
+.dones {
+  cursor: default;
+  width: 30px;
+  height: 30px;
+  background-color: rgb(17, 166, 17);
+  border-radius: 50%;
+  padding: 5px;
+  position: absolute;
+  right: 20%;
+  transition: 0.5s;
+  visibility: hidden;
+  color: white;
+  &:hover {
     transform: scale(1.1);
+  }
 }
-.add{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    position: relative;
+.undones {
+  cursor: default;
+  width: 30px;
+  height: 30px;
+  background-color: rgb(209, 2, 2);
+  border-radius: 50%;
+  padding: 5px;
+  position: absolute;
+  right: 10%;
+  transition: 0.5s;
+  visibility: hidden;
+  color: white;
 }
-.input{
-    border:none;
-    border-radius: 5px;
-    width: 100%;
-    font-size: 18px;
-    transition: 1s;
-    padding-left: 10px;
-    padding-right: 50px;
-    box-shadow: 2px 2px 2px 2px #4A90E2;
-    background-color: white;
-    height: 40px;
+.add {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  position: relative;
 }
-.input:focus{
+.input {
+  border: none;
+  border-radius: 5px;
+  width: 100%;
+  font-size: 18px;
+  transition: 1s;
+  padding-left: 10px;
+  padding-right: 50px;
+  box-shadow: 2px 2px 2px 2px #4a90e2;
+  background-color: white;
+  height: 40px;
+  &:focus {
     outline: none;
     box-shadow: 2px 2px 2px 2px green;
-    font-size: 20px;    
+    font-size: 20px;
+  }
 }
-.addbtn{
-    color: green;
-    font-size: 40px;
-    transition: 0.2s;
-    position: absolute;
-    text-align: center;
-    display: flex;
-    right: 3px;
-    visibility: hidden;
-    background-color: white;
-    border: none;
-    padding: 0;
-}
-.addbtn:hover{
+.addbtn {
+  color: green;
+  font-size: 40px;
+  transition: 0.2s;
+  position: absolute;
+  text-align: center;
+  display: flex;
+  right: 3px;
+  visibility: hidden;
+  background-color: white;
+  border: none;
+  padding: 0;
+  &:hover {
     color: rgb(0, 255, 0);
     cursor: pointer;
+  }
 }
-.tasks{
-    background-color: #4A90E2;
-    height: 60vh;
-    padding: 10px;
-    overflow: auto;
-    border-radius: 5px;
+.tasks {
+  background-color: #4a90e2;
+  height: 60vh;
+  padding: 10px;
+  overflow: auto;
+  border-radius: 5px;
 }
-li{
-    margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    position: relative;
-    transition: 0.2s;
-}
-li:hover{
+
+.task {
+  background: white;
+  margin: 10px auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  position: relative;
+  transition: 0.2s;
+  border-radius: 5px;
+  &:hover {
     transform: scale(1.01);
-}
-.li_text{
-    background-color:white;
-    border-radius: 5px 5px 0 0;
-    width: 100%;
-    height: 40px;
-    font-size: 22px;
-    margin: 10px 0;
-    padding: 5px;
-    overflow-x: auto;
-    cursor:pointer;
-    transition: 0.2s;
-    border: none;
-}
-.li_text:hover{
     box-shadow: 2px 2px 2px 2px green;
+  }
 }
-.li_text:focus{
+.li_info {
+  width: 100%;
+  height: 50px;
+  margin-top: 0;
+  display: none;
+  padding: 10px;
+}
+.li_text {
+  background-color: white;
+  border-radius: 5px 5px 0 0;
+  width: 100%;
+  height: 40px;
+  font-size: 22px;
+  padding: 5px;
+  overflow-x: auto;
+  cursor: pointer;
+  transition: 0.2s;
+  border: none;
+  &:focus {
     outline: none;
+  }
 }
-.done{
-    text-decoration: line-through;
-    background-color: rgb(122, 179, 66);
+.done {
+  text-decoration: line-through;
+  background-color: rgb(122, 179, 66);
 }
-.strikethrough{
-    color: green;
-    cursor: pointer;
-    font-size: 40px;
-    position:absolute;
-    z-index: 2;
-    visibility: hidden;
-    background-color: white;
-    padding: 5px;
-    width: 50px;
-    height: 50px;
-    border-radius: 0 0 0 10px;
-    transition: 0.1s;
-    right: 100px;
-    bottom: 0;
-    border-radius: 0 0 0 10px;
+.strikethrough {
+  color: green;
+  cursor: pointer;
+  font-size: 25px;
+  padding: 5px;
+  width: 50px;
+  height: 50px;
+  &:hover {
+    color: rgb(3, 208, 3);
+  }
 }
 
-.strikethrough:hover{
-    color: rgb(0, 255, 0);
-}
-.edit{
-    color: rgb(202, 202, 41);
-    cursor: pointer;
-    font-size: 38px;
-    position: absolute;
-    z-index: 2;
-    background-color: white;
-    visibility: hidden;
-    padding: 5px;
-    width: 50px;
-    height: 50px;
-    transition: 0.1s;
-    right: 50px;
-    bottom: 0;
-}
-.edit:hover{
+.edit {
+  color: rgb(202, 202, 41);
+  cursor: pointer;
+  font-size: 25px;
+  padding: 5px;
+  width: 50px;
+  height: 50px;
+  &:hover {
     color: rgb(131, 131, 0);
+  }
 }
-.onEdit{
-    background-color: rgb(255, 255, 101);
-    outline: outset;
-    cursor:text;
+.onEdit {
+  background-color: rgb(255, 255, 101);
+  outline: none;
+  border-bottom: 1px dotted lightgray;
+  cursor: text;
 }
-.onEdit:focus{
-    outline: outset;
+.onEdit:focus {
+  outline: invert;
 }
-.delete{
-    color: rgb(251, 73, 73);
-    cursor: pointer;
-    margin-top: 10px;
-    font-size: 38px;
-    position: absolute;
-    z-index: 2;
-    background-color: white;
-    visibility: hidden;
-    padding: 10px;
-    width: 50px;
-    height: 50px;
-    border-radius: 0 0 10px 0;
-    transition: 0.1s;
-    right: 0;
-    bottom: 0;
-
-}
-.delete:hover{
+.delete {
+  color: rgb(251, 73, 73);
+  cursor: pointer;
+  font-size: 25px;
+  padding: 10px;
+  width: 50px;
+  height: 50px;
+  margin-top: -5px;
+  &:hover {
     color: red;
+  }
 }
-.clearAll{
-    border-radius: 5px;
-    width: 150px;
-    height: 40px;
-    margin: 10px auto;
-    border: none;
-    background-color: white;
-    box-shadow: 2px 2px 2px 2px rgb(202, 8, 8);
-    transition: 0.2s;
-    display:none;
-}
-.clearAll:hover{
+.clearAll {
+  border-radius: 5px;
+  width: 150px;
+  height: 40px;
+  margin: 10px auto;
+  border: none;
+  background-color: white;
+  box-shadow: 2px 2px 2px 2px rgb(202, 8, 8);
+  transition: 0.2s;
+  display: none;
+  &:hover {
     background-color: rgb(253, 40, 40);
     color: white;
     cursor: pointer;
     transform: scale(1.1);
     box-shadow: 2px 2px 2px 2px black;
+  }
 }
-.undoAll{
-    border-radius: 5px;
-    width: 150px;
-    height: 40px;
-    margin: 10px auto;
-    border: none;
-    background-color: white;
-    box-shadow: 2px 2px 2px 2px green;
-    transition: 0.2s;
-    display:none;
-}
-.undoAll:hover{
+.undoneAll {
+  border-radius: 5px;
+  width: 150px;
+  height: 40px;
+  margin: 10px auto;
+  border: none;
+  background-color: white;
+  box-shadow: 2px 2px 2px 2px green;
+  transition: 0.2s;
+  display: none;
+  &:hover {
     background-color: green;
     color: white;
     cursor: pointer;
     transform: scale(1.1);
     box-shadow: 2px 2px 2px 2px black;
+  }
 }
-.alert{
-    background-color: #4a91e2e1;
-    z-index: 5;
-    position: fixed;
+.alert {
+  background-color: #4a91e2e1;
+  z-index: 5;
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+  padding-top: 30%;
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+  padding-top: 100px;
+  visibility: hidden;
+}
+.alert_box {
+  border: 2px 2px 2px black;
+  background-color: rgba(255, 0, 0, 0.952);
+  height: 170px;
+  width: 260px;
+  display: block;
+  margin: auto;
+  padding-top: 10px;
+  border-radius: 10px;
+  border: 2px solid black;
+}
+.alert button {
+  width: 110px;
+  border: none;
+  font-size: 20px;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: white;
+}
+.alert button:nth-child(2) {
+  box-shadow: 2px 2px 2px green;
+}
+.alert button:nth-child(3) {
+  box-shadow: 2px 2px 2px red;
+}
+.alert button:nth-child(2):hover {
+  background-color: rgb(33, 223, 33);
+  box-shadow: 2px 2px 2px 2px black;
+}
+.alert button:nth-child(3):hover {
+  background-color: red;
+  box-shadow: 2px 2px 2px 2px black;
+}
+@media (max-width: 700px) {
+  .time {
+    font-size: 18px;
     width: 100%;
-    height:100vh ;
-    text-align: center;
-    padding-top: 30%;
-    color: white;
-    font-size: 30px;
-    font-weight: bold;
-    padding-top: 100px;
-    visibility: hidden;
-}
-.alert_box{
-    border: 2px 2px 2px black;
-    background-color: rgba(255, 0, 0, 0.952);
-    height: 170px;
-    width: 260px;
-    display: block;
-    margin: auto;
-    padding-top: 10px;
-    border-radius: 10px;
-    border: 2px solid black;
-}
-.alert button{
-    width: 110px;
-    border: none;
-    font-size: 20px;
-    padding: 10px;
-    border-radius: 5px;
-    cursor: pointer;
-    background-color: white;
-}
-.alert button:nth-child(2){
-    box-shadow: 2px 2px 2px green;
-}
-.alert button:nth-child(3){
-    box-shadow: 2px 2px 2px red;
-
-}
-.alert button:nth-child(2):hover{
-    background-color: rgb(33, 223, 33);
-    box-shadow:2px 2px 2px 2px black;
-}
-.alert button:nth-child(3):hover{
-    background-color: red;
-    box-shadow: 2px 2px 2px 2px black;
-}
-@media(max-width:700px){
-    .time{
-        font-size: 18px;
-        width: 100%;
-    }
-    .header{
-        width: 100%;
-    }
-    form{
-        width: 100%;
-    }
-    .alert{
-        font-size: 25px;
-    }
-}
-.createdDate{
-    background-color: white;
-    text-align: left;
-    font-weight: bold;
+  }
+  .header {
     width: 100%;
-    /* z-index: 0; */
-    position: absolute;
-    bottom: -20px;
-    padding-left: 4px;
-    padding-top: 20px;
-    height: 55px;
-    border-radius: 0 0 5px 5px;
-    visibility: hidden;
-    /* margin-top: -10px; */
+  }
+  form {
+    width: 100%;
+  }
+  .alert {
+    font-size: 25px;
+  }
+}
+.createdDate {
+  text-align: left;
+  font-weight: bold;
+  width: 100%;
+  padding-bottom: 10px;
+}
+.highlight {
+  transform: scale(1.01);
+  box-shadow: 2px 2px 2px 2px green;
 }

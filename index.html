@@ -1,57 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
-    <link rel="icon" href="taskfav.png">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+      crossorigin="anonymous"
+    />
+    <link rel="icon" href="taskfav.png" />
     <title>TODO</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="container">
-        <div class="alert">
-            <span class="alert_box">
-                <p data-inner>Are you sure?</p>
-                <button class="yesBtn" data-inner>yes</button>
-                <button class="cancelBtn" data-inner>cancel</button>
-            </span>
+      <div class="alert">
+        <span class="alert_box">
+          <p data-inner>Are you sure?</p>
+          <button class="yesBtn" data-inner>yes</button>
+          <button class="cancelBtn" data-inner>cancel</button>
+        </span>
+      </div>
+      <div class="header">
+        <span class="time"></span>
+        <span class="undones" data-title title="Number of undone tasks"></span>
+        <span class="dones" data-title title="Number of undone tasks"></span>
+      </div>
+      <form>
+        <div class="add">
+          <input
+            class="input"
+            type="text"
+            data-place
+            dir="auto"
+            placeholder="Enter a new task here ..."
+          />
+          <button class="addbtn">
+            <i class="fas fa-plus-square" data-title title="Add the task"></i>
+          </button>
         </div>
-        <div class="header">
-            <span class="time"></span>
-            <span class="undones" data-title title='Number of undone tasks'></span>
-            <span class="dones" data-title title='Number of undone tasks'></span>
-        </div>
-<form >
-    <div class="add">
-        <input class="input" type="text" data-place dir=auto placeholder="Enter a new task here ..." />
-        <button class="addbtn">
-            <i class=" fas fa-plus-square" data-title title="Add the task"></i>
+        <ol class="tasks"></ol>
+        <button
+          class="clearAll"
+          type="text"
+          data-inner
+          data-title
+          title="Clear all the tasks"
+        >
+          Clear All
         </button>
+        <button
+          class="undoneAll"
+          type="text"
+          data-inner
+          data-title
+          title="Undo all the tasks"
+        >
+          Undone All
+        </button>
+        <p id="visits">...</p>
+      </form>
     </div>
-    <ol class="tasks"></ol>
-    <button class="clearAll" type="text" data-inner data-title title="Clear all the tasks">Clear All</button>
-    <button class="undoAll" type="text" data-inner data-title title="Undo all the tasks">Undo All</button>
-    <p id="visits">...</p>
-</form>
-    </div>
-<script type="module" src="add.js"></script>    
-<script type="module" src="showAddBtn.js"></script>    
-<script type="module" src="time.js"></script>    
-<script type="module" src="clear.js"></script>    
-<script type="module" src="clearAll.js"></script>    
-<script type="module" src="loadTasks.js"></script>    
-<script  type="module" src="done.js"></script>    
-<script type="module" src="edit.js"></script>    
-<script type="module" src="showOptions.js"></script> 
-<script type="module" src="delete.js"></script> 
-<script type="module" src="visits.js"></script> 
-<script type="module" src="visits.js"></script> 
-<script type="module" src="numberOfDones.js"></script> 
+    <script type="module" src="main.js"></script>
 
-
-<!-- <script type="module" src="lang.js"></script>  -->
-
-</body>
+    <script type="module" src="./modules/time.js"></script>
+    <script type="module" src="./modules/done.js"></script>
+    <script type="module" src="./modules/edit.js"></script>
+    <script type="module" src="./modules/showOptions.js"></script>
+    <script type="module" src="./modules/alertController.js"></script>
+    <script type="module" src="./modules/visits.js"></script>
+  </body>
 </html>
