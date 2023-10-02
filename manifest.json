@@ -2,7 +2,7 @@
     "name": "Todo_App",
     "short_name": "TODO",
     "description": "Todo_App is a small todo PWA",
-    "start_url": "/",
+    "start_url": "/new_todo",
     "display": "standalone",
     "background_color": "#f0f0f0",
     "theme_color": "#007bff",
