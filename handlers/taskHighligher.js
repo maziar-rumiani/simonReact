@@ -3,7 +3,7 @@ export const taskHighligher = (id) => {
   newTask.classList.add("highlight");
   newTask.scrollIntoView({
     behavior: "smooth",
-    block: "start",
+    block: "center",
     inline: "nearest",
   });
   setTimeout(() => {
